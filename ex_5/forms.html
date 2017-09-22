@@ -1,0 +1,11 @@
+{{if .Success}}
+    <h1>Success for your message!</h1>
+{{else}}
+    <h1>Concat</h1>
+    <form method="POST">
+        名字：<input type="text" name="name"><br>
+        邮箱：<input type="text" name="email"><br>
+        信息：<input type="text" name="message"><br>
+        <input type="submit" value="提交">
+    </form>
+{{end}}

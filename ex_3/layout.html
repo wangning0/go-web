@@ -1,0 +1,19 @@
+<style>
+.done {
+    color: red;
+}
+.undone {
+    color: blue;
+}
+</style>
+<h1>{{.PageTitle}}</h1>
+
+<ul>
+    {{range .Todos}}
+        {{if .Done}}
+            <li class="done">{{.Title}}</li>
+        {{else}}
+            <li class="undone">{{.Title}}</li>
+        {{end}}
+    {{end}}
+</ul>
