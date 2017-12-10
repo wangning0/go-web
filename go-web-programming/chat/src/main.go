@@ -14,6 +14,18 @@ func main() {
 
 	mux.HandleFunc("/", index)
 
+	// route_auth.go
+	mux.HandleFunc("/login", login)
+	mux.HandleFunc("/logout", logout)
+	mux.HandleFunc("/signup", signup)
+	mux.HandleFunc("/signup_account", signup_account)
+	mux.HandleFunc("/authenticate", authenticate)
+
+	// route_thread.go
+	mux.HandleFunc("/thread/new", newThread)
+	mux.HandleFunc("/thread/create", createThread)
+	mux.HandleFunc("/thread/read", readThread)
+	mux.HandleFunc("/thread/post", postThread)
 	server := &http.Server {
 		Addr: config.Address,
 		Handler: mux,

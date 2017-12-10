@@ -132,3 +132,12 @@ func (c *TCPConn) SetWriteDeadline(t time.Time) error
 ## UDP Socket
 
 Go语言包中处理UDP Socket和TCP Socket不同的地方救市在服务器端处理多个客户端请求数据包的方式不同，UDP缺少了对客户端连接请求的Accept函数
+
+```
+func ResolveUDPAddr(net, addr string) (*UDPAddr, os.Error)
+func DialUDP(net string, laddr, raddr *UDPAddr)(c *UDPConn, err os.Error)
+func ListenUDP(net string, laddr *UDPAddr) (c *UDPConn, err os.Error)
+func (c *UDPConn) ReadFromUDP(b []byte) (n int, addr *UDPAddr, err os.Error)
+func (c *UDPConn) WriteToUDP(b []byte, addr *UDPAddr) (n int, err os.Error)
+```
+
