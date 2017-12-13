@@ -68,6 +68,6 @@ func main() {
 	}
 	http.HandleFunc("/set_cookie", setCookie)
 	http.HandleFunc("/get_cookie", getCookie)
-	http.HandleFunc("/another_get_cookie", otherGetCookie)
+	http.HandleFunc("/ç", otherGetCookie)
 	server.ListenAndServe()
 }
